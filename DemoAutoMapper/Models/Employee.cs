@@ -9,7 +9,10 @@ namespace DemoAutoMapper.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }
-        public int DepartmentId { get; set; }
         public Department Department { get; set; }
+        public string GetFullName()
+        {
+            return $"{this.FirstName} {this.LastName}";
+        }
     }
 }

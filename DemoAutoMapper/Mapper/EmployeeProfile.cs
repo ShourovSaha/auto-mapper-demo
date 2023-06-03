@@ -9,8 +9,6 @@ namespace DemoAutoMapper.Mapper
         public EmployeeProfile()
         {
             CreateMap<Employee, EmployeeModel>()
-                .ForMember(dest => dest.FName, option => option.MapFrom(src => src.FirstName))
-                .ForMember(dest => dest.LName, option => option.MapFrom(src => src.LastName))
                 .ReverseMap();
         }
     }
